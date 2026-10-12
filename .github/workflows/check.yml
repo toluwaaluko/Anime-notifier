@@ -1,0 +1,37 @@
+name: Check for new episode
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # runs about every 30 minutes
+  workflow_dispatch:          # lets you also run it by hand with a button
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install requests beautifulsoup4
+
+      - name: Look for a new episode
+        run: python anime_notifier.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SHOW_URL: https://animeheaven.me/anime.php?mc642
+          SHOW_NAME: Psyren
+          DEBUG: "1"
+
+      - name: Remember the latest episode
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add state.json
+          git diff --staged --quiet || (git commit -m "Update latest episode" && git push)
