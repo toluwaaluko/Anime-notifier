@@ -30,8 +30,10 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_MENTIONS: ${{ secrets.DISCORD_MENTIONS }}
-          SHOW_URL: https://animeheaven.me/anime.php?mc642
-          SHOW_NAME: Psyren
+          DISCORD_WEBHOOK_URL_2: ${{ secrets.DISCORD_WEBHOOK_URL_2 }}
+          DISCORD_MENTIONS_2: ${{ secrets.DISCORD_MENTIONS_2 }}
+          DISCORD_WEBHOOK_URL_3: ${{ secrets.DISCORD_WEBHOOK_URL_3 }}
+          DISCORD_MENTIONS_3: ${{ secrets.DISCORD_MENTIONS_3 }}
           DEBUG: "1"
 
       - name: Remember the latest episode
