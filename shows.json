@@ -1,0 +1,44 @@
+{
+  "shows": [
+    {
+      "name": "Psyren",
+      "url": "https://animeheaven.me/anime.php?mc642"
+    },
+    {
+      "name": "Magical Explorer",
+      "url": "https://animeheaven.me/anime.php?gve9a",
+      "webhook": "DISCORD_WEBHOOK_URL_2",
+      "mentions": "DISCORD_MENTIONS_2"
+    },
+    {
+      "name": "Full Clearing Another World under a Goddess with Zero Believers",
+      "url": "https://animeheaven.me/anime.php?klx41",
+      "webhook": "DISCORD_WEBHOOK_URL_2",
+      "mentions": "DISCORD_MENTIONS_2"
+    },
+    {
+      "name": "Hi, I'm a Witch, and My Crush Wants Me to Make a Love Potion",
+      "url": "https://animeheaven.me/anime.php?wdmtv",
+      "webhook": "DISCORD_WEBHOOK_URL_3",
+      "mentions": "DISCORD_MENTIONS_3"
+    },
+    {
+      "name": "The Cold Sato-san is Only Sweet to Me",
+      "url": "https://animeheaven.me/anime.php?inver",
+      "webhook": "DISCORD_WEBHOOK_URL_3",
+      "mentions": "DISCORD_MENTIONS_3"
+    },
+    {
+      "name": "Firefly Wedding",
+      "url": "https://animeheaven.me/anime.php?bhbnn",
+      "webhook": "DISCORD_WEBHOOK_URL_3",
+      "mentions": "DISCORD_MENTIONS_3"
+    },
+    {
+      "name": "Even the Student Council Has Its Holes!",
+      "url": "https://animeheaven.me/anime.php?9sero",
+      "webhook": "DISCORD_WEBHOOK_URL_3",
+      "mentions": "DISCORD_MENTIONS_3"
+    }
+  ]
+}
