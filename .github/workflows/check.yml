@@ -29,6 +29,7 @@ jobs:
         run: python anime_notifier.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_MENTIONS: ${{ secrets.DISCORD_MENTIONS }}
           SHOW_URL: https://animeheaven.me/anime.php?mc642
           SHOW_NAME: Psyren
           DEBUG: "1"
