@@ -28,6 +28,8 @@ from bs4 import BeautifulSoup
 WEBHOOK = os.environ.get("DISCORD_WEBHOOK_URL")
 SHOW_URL = os.environ.get("SHOW_URL")
 SHOW_NAME = os.environ.get("SHOW_NAME", "Your anime")
+# Who to tag in Discord, e.g. "<@123456789> <@&987654321>". Optional.
+MENTIONS = os.environ.get("DISCORD_MENTIONS", "").strip()
 # Only links whose address contains this text count as episodes.
 # Similar-show links (anime.php?...) are ignored.
 EPISODE_LINK_PART = os.environ.get("EPISODE_LINK_PART", "gate.php")
@@ -79,7 +81,7 @@ def main():
     elif episode > last:
         r = requests.post(
             WEBHOOK,
-            json={"content": f"New episode out: **{SHOW_NAME}** episode {episode}\n{link}"},
+            json={"content": f"{MENTIONS} New episode out: **{SHOW_NAME}** episode {episode}\n{link}".strip()},
             timeout=30,
         )
         r.raise_for_status()
