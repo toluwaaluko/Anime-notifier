@@ -2,11 +2,15 @@ name: Check for new episode
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # runs about every 30 minutes
+    - cron: "*/5 * * * *"    # runs about every 5 minutes
   workflow_dispatch:          # lets you also run it by hand with a button
 
 permissions:
   contents: write
+
+concurrency:
+  group: check-episode
+  cancel-in-progress: false
 
 jobs:
   check:
